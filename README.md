@@ -29,3 +29,6 @@ Fait simplement afficher le message 'We are still hard at work'
 
 # Cancelled
 Silksong est cancelled, l'utilisateur se suicide immédiatement
+
+# Pour tout ce qui est vague
+Si vous ne comprenez pas quelque chose, improvisez
