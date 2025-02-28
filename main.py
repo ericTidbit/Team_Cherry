@@ -18,9 +18,9 @@ def main():
 
         match choix:
             case "1":
-
+                Silksong_waiter("Juanito", 11)
             case "2":
-
+                Silksong_waiter.kms(0)
             case "0":
                 print("Au revoir !")
                 break
