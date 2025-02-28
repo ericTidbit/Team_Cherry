@@ -12,7 +12,7 @@ class Compagnie:
 
     @nom.setter
     def nom(self, value):
-        nom = value
+        self._nom = value
 
     @property
     def nombre_fans(self):
@@ -20,10 +20,12 @@ class Compagnie:
 
     @nombre_fans.setter
     def nombre_fans(self, value):
-        nombre_fans = value
+        self._nombre_fans = value
 
     def annoncer(self):
-        release_date = datetime.date.today()
+        init_date = datetime.date.today()
+        release_date = init_date.day + 5
+
 
     def shadowdrop(self):
         pass
