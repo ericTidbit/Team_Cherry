@@ -5,24 +5,33 @@ class Silksong_waiter:
 
     @property
     def nom(self):
-        return self.nom
+        return self._nom
 
     @nom.setter
     def nom(self, nouveau_nom):
-        self.nom = nouveau_nom
+        self._nom = nouveau_nom
 
     @property
     def sanity(self):
-        return self.sanity
+        return self._sanity
 
     @sanity.setter
     def sanity(self, new_sanity):
-        self.sanity = new_sanity
+        if isinstance(self.sanity, int):
+            self._sanity = new_sanity
+        else:
+            raise ValueError("NaN")
+        
 
     def pass_day(self, sanity):
-        pass
+        if self.sanity <= 10:
+            kms(sanity)
+        else:
+            self.sanity += 5
 
     def kms(self, sanity):
-        pass
+        self.sanity = sanity
+        print("Tu t'est suicidé, rip")
+        sys.exit(0)
 
 
