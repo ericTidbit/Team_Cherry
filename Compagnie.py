@@ -12,7 +12,8 @@ class Compagnie:
 
     @nom.setter
     def nom(self, value):
-        self._nom = value
+        if isinstance(value, str):
+            self._nom = value
 
     @property
     def nombre_fans(self):
@@ -24,7 +25,8 @@ class Compagnie:
 
     def annoncer(self):
         init_date = datetime.date.today()
-        release_date = init_date.day + 5
+        release_date = init_date.day + 5 + init_date.month + init_date.year
+        return release_date
 
 
     def shadowdrop(self):
